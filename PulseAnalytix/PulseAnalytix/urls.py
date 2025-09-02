@@ -16,9 +16,14 @@ Including another URLconf
 """
 
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, include
 
 urlpatterns = [
-    path("admin/", admin.site.urls),
-    path("/home", PulseAnalytix.urls),
+    path('admin/', admin.site.urls),
+    path('', include('core.urls')),
+    path('accounts/', include('accounts.urls')),
+    path('dashboards/', include('dashboards.urls')),
+    path('pricing/', include('pricing.urls')),
+    path('contact/', include('contact.urls')),
+    path('payments/', include('payments.urls')),
 ]

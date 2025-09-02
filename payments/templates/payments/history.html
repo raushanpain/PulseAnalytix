@@ -1,0 +1,140 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Payment History - PulseAnalytix{% endblock %}
+
+{% block content %}
+<div class="history-page">
+    <div class="history-container">
+        <div class="history-header">
+            <h1>Payment History</h1>
+            <p>View all your past transactions and billing details</p>
+            <div class="header-actions">
+                <button class="btn-secondary">📧 Email History</button>
+                <button class="btn-primary">💳 Manage Payment</button>
+            </div>
+        </div>
+
+        <div class="history-content">
+            <div class="history-filters">
+                <div class="filter-group">
+                    <label>Date Range</label>
+                    <select>
+                        <option>Last 12 months</option>
+                        <option>Last 6 months</option>
+                        <option>Last 3 months</option>
+                        <option>Custom range</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label>Status</label>
+                    <select>
+                        <option>All statuses</option>
+                        <option>Completed</option>
+                        <option>Pending</option>
+                        <option>Failed</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label>Amount</label>
+                    <select>
+                        <option>All amounts</option>
+                        <option>$0 - $50</option>
+                        <option>$50 - $100</option>
+                        <option>$100+</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="history-summary">
+                <div class="summary-card">
+                    <h3>Total Paid</h3>
+                    <span class="summary-value">$1,247.80</span>
+                    <span class="summary-period">Last 12 months</span>
+                </div>
+                <div class="summary-card">
+                    <h3>Transactions</h3>
+                    <span class="summary-value">14</span>
+                    <span class="summary-period">Total payments</span>
+                </div>
+                <div class="summary-card">
+                    <h3>Average</h3>
+                    <span class="summary-value">$89.13</span>
+                    <span class="summary-period">Per transaction</span>
+                </div>
+            </div>
+
+            <div class="history-table">
+                <table class="payments-table">
+                    <thead>
+                        <tr>
+                            <th>Date</th>
+                            <th>Description</th>
+                            <th>Method</th>
+                            <th>Amount</th>
+                            <th>Status</th>
+                            <th>Invoice</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Feb 15, 2024</td>
+                            <td>Professional Plan - Monthly</td>
+                            <td>•••• 4242</td>
+                            <td>$86.90</td>
+                            <td><span class="status completed">Completed</span></td>
+                            <td><a href="#" class="download-link">📄 Download</a></td>
+                        </tr>
+                        <tr>
+                            <td>Jan 15, 2024</td>
+                            <td>Professional Plan - Monthly</td>
+                            <td>•••• 4242</td>
+                            <td>$86.90</td>
+                            <td><span class="status completed">Completed</span></td>
+                            <td><a href="#" class="download-link">📄 Download</a></td>
+                        </tr>
+                        <tr>
+                            <td>Dec 15, 2023</td>
+                            <td>Professional Plan - Monthly</td>
+                            <td>•••• 4242</td>
+                            <td>$86.90</td>
+                            <td><span class="status completed">Completed</span></td>
+                            <td><a href="#" class="download-link">📄 Download</a></td>
+                        </tr>
+                        <tr>
+                            <td>Nov 15, 2023</td>
+                            <td>Professional Plan - Monthly</td>
+                            <td>•••• 4242</td>
+                            <td>$86.90</td>
+                            <td><span class="status failed">Failed</span></td>
+                            <td><a href="#" class="retry-link">🔄 Retry</a></td>
+                        </tr>
+                        <tr>
+                            <td>Oct 15, 2023</td>
+                            <td>Plan Upgrade - Professional</td>
+                            <td>•••• 4242</td>
+                            <td>$29.00</td>
+                            <td><span class="status completed">Completed</span></td>
+                            <td><a href="#" class="download-link">📄 Download</a></td>
+                        </tr>
+                        <tr>
+                            <td>Oct 01, 2023</td>
+                            <td>Basic Plan - Monthly</td>
+                            <td>•••• 4242</td>
+                            <td>$32.90</td>
+                            <td><span class="status completed">Completed</span></td>
+                            <td><a href="#" class="download-link">📄 Download</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="history-pagination">
+                <button class="btn-secondary">← Previous</button>
+                <span class="pagination-info">Showing 1-6 of 14 transactions</span>
+                <button class="btn-secondary">Next →</button>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

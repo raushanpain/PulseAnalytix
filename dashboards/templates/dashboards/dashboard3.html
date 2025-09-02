@@ -1,0 +1,94 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Dashboard 3 - PulseAnalytix{% endblock %}
+
+{% block content %}
+<div class="dashboard-page dashboard-3-page">
+    <div class="dashboard-header">
+        <h1>Dashboard 3 - Performance Metrics</h1>
+        <div class="dashboard-controls">
+            <button class="btn-secondary">Configure</button>
+            <button class="btn-primary">Analyze</button>
+        </div>
+    </div>
+
+    <div class="dashboard-content">
+        <div class="dashboard-main">
+            <div class="main-chart-section">
+                <div class="chart-container orange">
+                    <h3>Performance Overview</h3>
+                    <div class="chart-placeholder">
+                        <div class="chart-content">
+                            <p>System Performance Monitoring</p>
+                            <div class="performance-indicators">
+                                <div class="indicator">
+                                    <div class="indicator-circle cpu">
+                                        <span>CPU</span>
+                                        <span>72%</span>
+                                    </div>
+                                </div>
+                                <div class="indicator">
+                                    <div class="indicator-circle memory">
+                                        <span>Memory</span>
+                                        <span>45%</span>
+                                    </div>
+                                </div>
+                                <div class="indicator">
+                                    <div class="indicator-circle disk">
+                                        <span>Disk</span>
+                                        <span>63%</span>
+                                    </div>
+                                </div>
+                                <div class="indicator">
+                                    <div class="indicator-circle network">
+                                        <span>Network</span>
+                                        <span>28%</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="dashboard-sidebar">
+            <div class="sidebar-section">
+                <h4>System Health</h4>
+                <div class="health-status">
+                    <div class="health-item">
+                        <span class="health-indicator good"></span>
+                        <span class="health-label">API Response</span>
+                        <span class="health-value">98ms</span>
+                    </div>
+                    <div class="health-item">
+                        <span class="health-indicator warning"></span>
+                        <span class="health-label">Database Load</span>
+                        <span class="health-value">High</span>
+                    </div>
+                    <div class="health-item">
+                        <span class="health-indicator good"></span>
+                        <span class="health-label">Uptime</span>
+                        <span class="health-value">99.9%</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="sidebar-section">
+                <h4>Alerts</h4>
+                <div class="alerts-list">
+                    <div class="alert-item warning">
+                        <span class="alert-icon">⚠️</span>
+                        <span class="alert-text">High memory usage detected</span>
+                    </div>
+                    <div class="alert-item info">
+                        <span class="alert-icon">ℹ️</span>
+                        <span class="alert-text">Maintenance window scheduled</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

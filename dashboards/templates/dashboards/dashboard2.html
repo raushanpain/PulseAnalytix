@@ -1,0 +1,78 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Dashboard 2 - PulseAnalytix{% endblock %}
+
+{% block content %}
+<div class="dashboard-page dashboard-2-page">
+    <div class="dashboard-header">
+        <h1>Dashboard 2 - Data Insights</h1>
+        <div class="dashboard-controls">
+            <button class="btn-secondary">Filter</button>
+            <button class="btn-primary">Update</button>
+        </div>
+    </div>
+
+    <div class="dashboard-content">
+        <div class="dashboard-main">
+            <div class="main-chart-section">
+                <div class="chart-container black">
+                    <h3>Deep Data Analysis</h3>
+                    <div class="chart-placeholder">
+                        <div class="chart-content">
+                            <p>Advanced Metrics Dashboard</p>
+                            <div class="metrics-grid">
+                                <div class="metric-card">
+                                    <h4>Conversion Rate</h4>
+                                    <span class="metric-value">3.8%</span>
+                                </div>
+                                <div class="metric-card">
+                                    <h4>Bounce Rate</h4>
+                                    <span class="metric-value">24.6%</span>
+                                </div>
+                                <div class="metric-card">
+                                    <h4>Session Duration</h4>
+                                    <span class="metric-value">4:32</span>
+                                </div>
+                                <div class="metric-card">
+                                    <h4>Page Views</h4>
+                                    <span class="metric-value">15.2K</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="dashboard-sidebar">
+            <div class="sidebar-section">
+                <h4>Data Sources</h4>
+                <div class="data-sources">
+                    <div class="source-item">
+                        <span class="source-status active"></span>
+                        <span class="source-name">Google Analytics</span>
+                    </div>
+                    <div class="source-item">
+                        <span class="source-status active"></span>
+                        <span class="source-name">Database API</span>
+                    </div>
+                    <div class="source-item">
+                        <span class="source-status inactive"></span>
+                        <span class="source-name">External Feed</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="sidebar-section">
+                <h4>Export Options</h4>
+                <div class="export-buttons">
+                    <button class="export-btn">📊 Excel</button>
+                    <button class="export-btn">📄 PDF</button>
+                    <button class="export-btn">📈 CSV</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,92 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Dashboard 1 - PulseAnalytix{% endblock %}
+
+{% block content %}
+<div class="dashboard-page dashboard-1-page">
+    <div class="dashboard-header">
+        <h1>Dashboard 1 - Advanced Analytics</h1>
+        <div class="dashboard-controls">
+            <button class="btn-secondary">Export</button>
+            <button class="btn-primary">Refresh</button>
+        </div>
+    </div>
+
+    <div class="dashboard-content">
+        <div class="dashboard-main">
+            <div class="main-chart-section">
+                <div class="chart-container blue-dark">
+                    <h3>Primary Analytics View</h3>
+                    <div class="chart-placeholder">
+                        <div class="chart-content">
+                            <p>Real-time Data Visualization</p>
+                            <div class="chart-stats">
+                                <div class="stat-item">
+                                    <span class="stat-value">1,234</span>
+                                    <span class="stat-label">Active Users</span>
+                                </div>
+                                <div class="stat-item">
+                                    <span class="stat-value">89.2%</span>
+                                    <span class="stat-label">Performance</span>
+                                </div>
+                                <div class="stat-item">
+                                    <span class="stat-value">$45.6K</span>
+                                    <span class="stat-label">Revenue</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="dashboard-sidebar">
+            <div class="sidebar-section">
+                <h4>Quick Stats</h4>
+                <div class="quick-stats">
+                    <div class="quick-stat">
+                        <span class="stat-icon">📈</span>
+                        <div class="stat-info">
+                            <span class="stat-number">+12.5%</span>
+                            <span class="stat-text">Growth Rate</span>
+                        </div>
+                    </div>
+                    <div class="quick-stat">
+                        <span class="stat-icon">👥</span>
+                        <div class="stat-info">
+                            <span class="stat-number">2,847</span>
+                            <span class="stat-text">Total Users</span>
+                        </div>
+                    </div>
+                    <div class="quick-stat">
+                        <span class="stat-icon">💰</span>
+                        <div class="stat-info">
+                            <span class="stat-number">$127.3K</span>
+                            <span class="stat-text">Total Revenue</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="sidebar-section">
+                <h4>Recent Activity</h4>
+                <div class="activity-list">
+                    <div class="activity-item">
+                        <span class="activity-time">2 min ago</span>
+                        <span class="activity-text">New user registered</span>
+                    </div>
+                    <div class="activity-item">
+                        <span class="activity-time">5 min ago</span>
+                        <span class="activity-text">Data sync completed</span>
+                    </div>
+                    <div class="activity-item">
+                        <span class="activity-time">12 min ago</span>
+                        <span class="activity-text">Report generated</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

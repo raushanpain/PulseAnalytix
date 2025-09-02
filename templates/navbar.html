@@ -1,0 +1,41 @@
+{% load static %}
+<nav class="navbar">
+    <div class="navbar-container">
+        <div class="navbar-brand">
+            <a href="{% url 'home' %}">PulseAnalytix</a>
+        </div>
+        
+        <div class="navbar-menu">
+            <a href="{% url 'home' %}" class="nav-link {% if request.resolver_match.url_name == 'home' %}active{% endif %}">Home</a>
+            <a href="{% url 'about' %}" class="nav-link {% if request.resolver_match.url_name == 'about' %}active{% endif %}">About</a>
+            <a href="{% url 'pricing' %}" class="nav-link {% if request.resolver_match.url_name == 'pricing' %}active{% endif %}">Pricing</a>
+            <a href="{% url 'contact' %}" class="nav-link {% if request.resolver_match.url_name == 'contact' %}active{% endif %}">Contact</a>
+            
+            <div class="dropdown">
+                <a href="#" class="nav-link dropdown-toggle">Profile</a>
+                <div class="dropdown-menu">
+                    {% if user.is_authenticated %}
+                        <a href="{% url 'profile' %}" class="dropdown-link">My Profile</a>
+                        <a href="{% url 'dashboard1' %}" class="dropdown-link">Dashboard 1</a>
+                        <a href="{% url 'dashboard2' %}" class="dropdown-link">Dashboard 2</a>
+                        <a href="{% url 'dashboard3' %}" class="dropdown-link">Dashboard 3</a>
+                        <a href="{% url 'dashboard4' %}" class="dropdown-link">Dashboard 4</a>
+                        <a href="{% url 'payment' %}" class="dropdown-link">Payment Portal</a>
+                        <a href="{% url 'payment_history' %}" class="dropdown-link">Payment History</a>
+                        <div class="dropdown-divider"></div>
+                        <a href="{% url 'logout' %}" class="dropdown-link logout-link">Logout</a>
+                    {% else %}
+                        <a href="{% url 'login' %}" class="dropdown-link">Login</a>
+                        <a href="{% url 'signup' %}" class="dropdown-link">Sign Up</a>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+        
+        <div class="navbar-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+</nav>

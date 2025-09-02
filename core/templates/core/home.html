@@ -1,0 +1,123 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Home - PulseAnalytix{% endblock %}
+
+{% block content %}
+<div class="home-container">
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="hero-content">
+            <div class="logo-section">
+                <div class="main-logo">
+                    <h1>PulseAnalytix</h1>
+                    <p>Advanced Analytics Platform</p>
+                </div>
+            </div>
+            
+            {% if user.is_authenticated %}
+                <div class="user-actions">
+                    <button class="chat-btn">💬 Chat</button>
+                </div>
+            {% endif %}
+        </div>
+    </section>
+
+    <!-- Dashboard Grid -->
+    {% if user.is_authenticated %}
+    <section class="dashboard-grid">
+        <div class="dashboard-card dashboard-1">
+            <a href="{% url 'dashboard1' %}">
+                <div class="dashboard-content">
+                    <h3>Analytics Dashboard</h3>
+                    <div class="dashboard-preview">
+                        <div class="preview-content blue-dark">
+                            <p>Advanced Analytics</p>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </div>
+
+        <div class="dashboard-card dashboard-2">
+            <a href="{% url 'dashboard2' %}">
+                <div class="dashboard-content">
+                    <h3>Data Insights</h3>
+                    <div class="dashboard-preview">
+                        <div class="preview-content black">
+                            <p>Deep Analysis</p>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </div>
+
+        <div class="dashboard-card dashboard-3">
+            <a href="{% url 'dashboard3' %}">
+                <div class="dashboard-content">
+                    <h3>Performance</h3>
+                    <div class="dashboard-preview">
+                        <div class="preview-content orange">
+                            <p>System Metrics</p>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </div>
+
+        <div class="dashboard-card dashboard-4">
+            <a href="{% url 'dashboard4' %}">
+                <div class="dashboard-content">
+                    <h3>Real-time Data</h3>
+                    <div class="dashboard-preview">
+                        <div class="preview-content pink">
+                            <p>Live Analytics</p>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about-section">
+        <div class="about-content">
+            <h2>About Us</h2>
+            <p>PulseAnalytix provides comprehensive data analytics solutions for modern businesses.</p>
+            <a href="{% url 'about' %}" class="btn-primary">Learn More</a>
+        </div>
+    </section>
+    {% else %}
+    <!-- Welcome Section for non-authenticated users -->
+    <section class="welcome-section">
+        <div class="welcome-content">
+            <h2>Welcome to PulseAnalytix</h2>
+            <p>Unlock the power of data analytics with our comprehensive dashboard platform.</p>
+            <div class="cta-buttons">
+                <a href="{% url 'signup' %}" class="btn-primary">Get Started</a>
+                <a href="{% url 'login' %}" class="btn-secondary">Login</a>
+            </div>
+        </div>
+        
+        <div class="features-grid">
+            <div class="feature-card">
+                <h3>Real-time Analytics</h3>
+                <p>Monitor your data in real-time with our advanced dashboard system.</p>
+            </div>
+            <div class="feature-card">
+                <h3>Custom Dashboards</h3>
+                <p>Create personalized dashboards tailored to your business needs.</p>
+            </div>
+            <div class="feature-card">
+                <h3>Data Insights</h3>
+                <p>Gain valuable insights from your data with our AI-powered analytics.</p>
+            </div>
+            <div class="feature-card">
+                <h3>Secure Platform</h3>
+                <p>Your data is protected with enterprise-grade security measures.</p>
+            </div>
+        </div>
+    </section>
+    {% endif %}
+</div>
+{% endblock %}

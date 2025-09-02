@@ -1,0 +1,114 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Pricing - PulseAnalytix{% endblock %}
+
+{% block content %}
+<div class="pricing-page">
+    <div class="pricing-container">
+        <div class="pricing-header">
+            <h1>Choose Your Plan</h1>
+            <p class="lead">Select the perfect plan for your analytics needs</p>
+        </div>
+
+        <div class="pricing-grid">
+            <div class="pricing-card basic">
+                <div class="plan-header">
+                    <h3>Basic</h3>
+                    <div class="price">
+                        <span class="currency">$</span>
+                        <span class="amount">29</span>
+                        <span class="period">/month</span>
+                    </div>
+                </div>
+                <div class="plan-features">
+                    <ul>
+                        <li>✓ 1 Dashboard</li>
+                        <li>✓ Basic Analytics</li>
+                        <li>✓ Email Support</li>
+                        <li>✓ 1 User Account</li>
+                        <li>✓ 10GB Storage</li>
+                    </ul>
+                </div>
+                <div class="plan-action">
+                    <a href="#" class="btn-plan">Get Started</a>
+                </div>
+            </div>
+
+            <div class="pricing-card professional featured">
+                <div class="plan-badge">Most Popular</div>
+                <div class="plan-header">
+                    <h3>Professional</h3>
+                    <div class="price">
+                        <span class="currency">$</span>
+                        <span class="amount">79</span>
+                        <span class="period">/month</span>
+                    </div>
+                </div>
+                <div class="plan-features">
+                    <ul>
+                        <li>✓ 4 Dashboards</li>
+                        <li>✓ Advanced Analytics</li>
+                        <li>✓ Priority Support</li>
+                        <li>✓ 5 User Accounts</li>
+                        <li>✓ 100GB Storage</li>
+                        <li>✓ Custom Reports</li>
+                        <li>✓ API Access</li>
+                    </ul>
+                </div>
+                <div class="plan-action">
+                    <a href="#" class="btn-plan featured">Get Started</a>
+                </div>
+            </div>
+
+            <div class="pricing-card enterprise">
+                <div class="plan-header">
+                    <h3>Enterprise</h3>
+                    <div class="price">
+                        <span class="currency">$</span>
+                        <span class="amount">199</span>
+                        <span class="period">/month</span>
+                    </div>
+                </div>
+                <div class="plan-features">
+                    <ul>
+                        <li>✓ Unlimited Dashboards</li>
+                        <li>✓ AI-Powered Analytics</li>
+                        <li>✓ 24/7 Phone Support</li>
+                        <li>✓ Unlimited Users</li>
+                        <li>✓ 1TB Storage</li>
+                        <li>✓ Custom Integrations</li>
+                        <li>✓ White-label Options</li>
+                        <li>✓ Dedicated Account Manager</li>
+                    </ul>
+                </div>
+                <div class="plan-action">
+                    <a href="#" class="btn-plan">Contact Sales</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="pricing-faq">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <h4>Can I change my plan anytime?</h4>
+                    <p>Yes, you can upgrade or downgrade your plan at any time. Changes will be reflected in your next billing cycle.</p>
+                </div>
+                <div class="faq-item">
+                    <h4>Is there a free trial?</h4>
+                    <p>We offer a 14-day free trial for all plans. No credit card required to get started.</p>
+                </div>
+                <div class="faq-item">
+                    <h4>What payment methods do you accept?</h4>
+                    <p>We accept all major credit cards, PayPal, and bank transfers for enterprise plans.</p>
+                </div>
+                <div class="faq-item">
+                    <h4>Is my data secure?</h4>
+                    <p>Yes, we use enterprise-grade encryption and security measures to protect your data.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

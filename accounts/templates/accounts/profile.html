@@ -1,0 +1,120 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Profile - PulseAnalytix{% endblock %}
+
+{% block content %}
+<div class="profile-page">
+    <div class="profile-container">
+        <div class="profile-header">
+            <h1>User Profile</h1>
+            <p>Manage your account settings and preferences</p>
+        </div>
+
+        <div class="profile-content">
+            <div class="profile-sidebar">
+                <div class="profile-card">
+                    <div class="profile-avatar">
+                        <div class="avatar-circle">
+                            {{ user.first_name.0|default:"U" }}{{ user.last_name.0|default:"" }}
+                        </div>
+                    </div>
+                    <div class="profile-info">
+                        <h3>{{ user.get_full_name|default:user.username }}</h3>
+                        <p>{{ user.email }}</p>
+                        <span class="profile-status">Active Member</span>
+                    </div>
+                </div>
+
+                <div class="profile-menu">
+                    <a href="#personal" class="menu-item active">Personal Information</a>
+                    <a href="#security" class="menu-item">Security</a>
+                    <a href="#notifications" class="menu-item">Notifications</a>
+                    <a href="#billing" class="menu-item">Billing</a>
+                </div>
+            </div>
+
+            <div class="profile-main">
+                <div class="profile-section" id="personal">
+                    <h2>Personal Information</h2>
+                    
+                    {% if messages %}
+                        {% for message in messages %}
+                            <div class="alert alert-{{ message.tags }}">
+                                {{ message }}
+                            </div>
+                        {% endfor %}
+                    {% endif %}
+
+                    <form method="post" class="profile-form">
+                        {% csrf_token %}
+                        
+                        <div class="form-row">
+                            <div class="form-group half">
+                                <label>First Name</label>
+                                <input type="text" value="{{ user.first_name }}" readonly>
+                            </div>
+                            <div class="form-group half">
+                                <label>Last Name</label>
+                                <input type="text" value="{{ user.last_name }}" readonly>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Email Address</label>
+                            <input type="email" value="{{ user.email }}" readonly>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="{{ form.bio.id_for_label }}">Bio</label>
+                            {{ form.bio }}
+                        </div>
+
+                        <div class="form-group">
+                            <label for="{{ form.location.id_for_label }}">Location</label>
+                            {{ form.location }}
+                        </div>
+
+                        <div class="form-group">
+                            <label for="{{ form.birth_date.id_for_label }}">Birth Date</label>
+                            {{ form.birth_date }}
+                        </div>
+
+                        <div class="form-actions">
+                            <button type="submit" class="btn-primary">Update Profile</button>
+                            <button type="button" class="btn-secondary">Cancel</button>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="profile-stats">
+                    <h3>Account Statistics</h3>
+                    <div class="stats-grid">
+                        <div class="stat-item">
+                            <span class="stat-icon">📊</span>
+                            <div class="stat-info">
+                                <span class="stat-number">4</span>
+                                <span class="stat-label">Dashboards</span>
+                            </div>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-icon">📈</span>
+                            <div class="stat-info">
+                                <span class="stat-number">127</span>
+                                <span class="stat-label">Reports</span>
+                            </div>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-icon">🕐</span>
+                            <div class="stat-info">
+                                <span class="stat-number">{{ user.date_joined|date:"M d, Y" }}</span>
+                                <span class="stat-label">Member Since</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

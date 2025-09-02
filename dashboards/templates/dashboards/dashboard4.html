@@ -1,0 +1,96 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Dashboard 4 - PulseAnalytix{% endblock %}
+
+{% block content %}
+<div class="dashboard-page dashboard-4-page">
+    <div class="dashboard-header">
+        <h1>Dashboard 4 - Real-time Data</h1>
+        <div class="dashboard-controls">
+            <button class="btn-secondary">Settings</button>
+            <button class="btn-primary">Live View</button>
+        </div>
+    </div>
+
+    <div class="dashboard-content">
+        <div class="dashboard-main">
+            <div class="main-chart-section">
+                <div class="chart-container pink">
+                    <h3>Live Data Stream</h3>
+                    <div class="chart-placeholder">
+                        <div class="chart-content">
+                            <p>Real-time Analytics Feed</p>
+                            <div class="realtime-data">
+                                <div class="data-stream">
+                                    <div class="stream-item">
+                                        <span class="timestamp">14:32:15</span>
+                                        <span class="event">User Login</span>
+                                        <span class="value">+1</span>
+                                    </div>
+                                    <div class="stream-item">
+                                        <span class="timestamp">14:32:08</span>
+                                        <span class="event">Page View</span>
+                                        <span class="value">+5</span>
+                                    </div>
+                                    <div class="stream-item">
+                                        <span class="timestamp">14:31:54</span>
+                                        <span class="event">Transaction</span>
+                                        <span class="value">$127.50</span>
+                                    </div>
+                                    <div class="stream-item">
+                                        <span class="timestamp">14:31:42</span>
+                                        <span class="event">Sign Up</span>
+                                        <span class="value">+1</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="dashboard-sidebar">
+            <div class="sidebar-section">
+                <h4>Live Metrics</h4>
+                <div class="live-metrics">
+                    <div class="live-metric">
+                        <span class="metric-label">Active Sessions</span>
+                        <span class="metric-value live">247</span>
+                    </div>
+                    <div class="live-metric">
+                        <span class="metric-label">Events/min</span>
+                        <span class="metric-value live">1,432</span>
+                    </div>
+                    <div class="live-metric">
+                        <span class="metric-label">Revenue/hour</span>
+                        <span class="metric-value live">$3,847</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="sidebar-section">
+                <h4>Event Types</h4>
+                <div class="event-types">
+                    <div class="event-type">
+                        <span class="event-color login"></span>
+                        <span class="event-name">User Logins</span>
+                        <span class="event-count">89</span>
+                    </div>
+                    <div class="event-type">
+                        <span class="event-color pageview"></span>
+                        <span class="event-name">Page Views</span>
+                        <span class="event-count">1,204</span>
+                    </div>
+                    <div class="event-type">
+                        <span class="event-color transaction"></span>
+                        <span class="event-name">Transactions</span>
+                        <span class="event-count">23</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
