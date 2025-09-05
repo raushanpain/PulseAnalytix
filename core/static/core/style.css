@@ -129,39 +129,68 @@ body {
 }
 
 .hero-section {
-    text-align: center;
+    background-color: #7BBBFF;
+    min-height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 20px;
     margin-bottom: 60px;
 }
 
-.hero-content {
+.hero-banner {
+    background-color: var(--white);
+    padding: 40px 80px;
+    border-radius: 8px;
+    margin-bottom: 80px;
+    box-shadow: 0 4px 10px rgba(5, 15, 42, 0.1);
+}
+
+.hero-title {
+    font-size: 4rem;
+    font-weight: bold;
+    color: var(--text-dark);
+    margin: 0;
+    text-align: center;
+}
+
+.hero-actions {
     display: flex;
-    justify-content: space-between;
+    gap: 40px;
     align-items: center;
-    background: linear-gradient(135deg, var(--dark-navy) 0%, var(--purple) 100%);
-    color: var(--white);
-    padding: 60px 40px;
-    border-radius: 20px;
-    margin-bottom: 40px;
 }
 
-.main-logo h1 {
-    font-size: 3rem;
-    margin-bottom: 10px;
-}
-
-.chat-btn {
-    background: var(--primary-blue);
+.upload-btn {
+    background-color: #6c757d;
     color: var(--white);
     border: none;
-    padding: 15px 30px;
-    border-radius: 50px;
-    font-size: 1.1rem;
+    padding: 20px 60px;
+    font-size: 1.2rem;
+    font-weight: 500;
+    border-radius: 8px;
     cursor: pointer;
-    transition: transform 0.3s;
+    transition: background-color 0.3s ease;
 }
 
-.chat-btn:hover {
-    transform: translateY(-2px);
+.upload-btn:hover {
+    background-color: #5a6268;
+}
+
+.submit-btn {
+    background-color: #fd7e14;
+    color: var(--white);
+    border: none;
+    padding: 20px 60px;
+    font-size: 1.2rem;
+    font-weight: 500;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+    background-color: #e8610e;
 }
 
 /* Dashboard Grid */
@@ -487,9 +516,30 @@ body {
         grid-template-columns: 1fr;
     }
     
-    .hero-content {
+    .hero-section {
+        padding: 40px 20px;
+        min-height: 60vh;
+    }
+    
+    .hero-banner {
+        padding: 30px 40px;
+        margin-bottom: 60px;
+    }
+    
+    .hero-title {
+        font-size: 2.5rem;
+    }
+    
+    .hero-actions {
         flex-direction: column;
-        text-align: center;
+        gap: 20px;
+    }
+    
+    .upload-btn,
+    .submit-btn {
+        padding: 16px 40px;
+        font-size: 1.1rem;
+        width: 200px;
     }
     
     .cta-buttons {

@@ -7,19 +7,13 @@
 <div class="home-container">
     <!-- Hero Section -->
     <section class="hero-section">
-        <div class="hero-content">
-            <div class="logo-section">
-                <div class="main-logo">
-                    <h1>PulseAnalytix</h1>
-                    <p>Advanced Analytics Platform</p>
-                </div>
-            </div>
-            
-            {% if user.is_authenticated %}
-                <div class="user-actions">
-                    <button class="chat-btn">💬 Chat</button>
-                </div>
-            {% endif %}
+        <div class="hero-banner">
+            <h1 class="hero-title">PulseAnalytix</h1>
+        </div>
+        
+        <div class="hero-actions">
+            <button class="upload-btn">Upload file</button>
+            <button class="submit-btn">Submit</button>
         </div>
     </section>
 
